@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+<label> Enter a number</label><input type="text" id="txtNhap"/>
+<input type="button" id="btnShow" value="Show" onclick="show();"/>
+<script>
+    function check(n) {
+        var check = true;
+        if (n < 2) {
+            check = false;
+        } else {
+            for (var i = 2; i < n; i++) {
+                if (n % i === 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check;
+    }
+
+    function show() {
+        let number = Number(document.getElementById("txtNhap").value);
+        let N = 2;
+        let count = 0;
+        while (count < number) {
+            if (check(N) == true) {
+                count++;
+                document.write(N + " ");
+            }
+            N++;
+        }
+    }
+</script>
+</body>
+</body>
+</html>
